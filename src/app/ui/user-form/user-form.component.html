@@ -1,4 +1,4 @@
-<form [formGroup]="userForm"  *ngIf="newUser"  (ngSubmit)="signup()">
+<!-- <form [formGroup]="userForm"  *ngIf="newUser"  (ngSubmit)="signup()">
 
   <h3>New User Signup</h3>
   <p class="button is-small" (click)="toggleForm()">Already Registered?</p>
@@ -23,13 +23,15 @@
   <div *ngIf="userForm.valid" class="notification is-success">Form is valid</div>
   <button type="submit" class="button" [disabled]="!userForm.valid">Submit</button>
 
-</form>
+</form> -->
 
+<!-- 
+<form [formGroup]="userForm"  *ngIf="!newUser"  (ngSubmit)="login()"> -->
 
-<form [formGroup]="userForm"  *ngIf="!newUser"  (ngSubmit)="login()">
+<form [formGroup]="userForm" (ngSubmit)="login()">
 
-  <h3>Existing User Login</h3>
-  <p class="btn button is-small" (click)="toggleForm()">New User?</p>
+  <h3>ICNEF Admin Login</h3>
+  <!-- <p class="btn button is-small" (click)="toggleForm()">New User?</p> -->
   <hr>
 
   <label for="email">Email</label>
@@ -52,7 +54,7 @@
 
   <span *ngIf="userForm.valid" class="help is-success">Form Looks Valid</span>
 
-  <a *ngIf="!passReset && userForm.controls.email.valid" class="help is-info" (click)="resetPassword()">Reset Password for {{userForm.value.email}}?</a>
-  <p *ngIf="passReset" class="help is-info">Reset requested. Check your email instructions.</p>
+  <!-- <a *ngIf="!passReset && userForm.controls.email.valid" class="help is-info" (click)="resetPassword()">Reset Password for {{userForm.value.email}}?</a>
+  <p *ngIf="passReset" class="help is-info">Reset requested. Check your email instructions.</p> -->
 
 </form>

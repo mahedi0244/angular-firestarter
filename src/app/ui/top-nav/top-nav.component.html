@@ -1,7 +1,7 @@
 <nav class="nav">
   <div class="nav-left">
     <a class="nav-item logo" routerLink="/">
-      <img src="assets/images/angularfirebase.png" width="30px" alt="Firestarter Angular4 Demo App"/> FireStarter
+      <img src="assets/images/islamicLogo.png" alt="ISLAMIC CENTER OF NORTH EAST FLORIDA"/>ICNEF
     </a>
   </div>
 
@@ -15,18 +15,25 @@
 
   <!-- This "nav-menu" is hidden on mobile -->
   <!-- Add the modifier "is-active" to display it on mobile -->
+
+  
   <div class="nav-right nav-menu" [ngClass]="{'is-active': show}">
-    <a class="nav-item" routerLink="/login">
+    <a *ngIf="!(auth.user | async); else alreadyLoggedIn" class="nav-item" routerLink="/login">
       Login
     </a>
-    <a class="nav-item" routerLink="/notes">
-      Firestore
-    </a>
+    <ng-template #alreadyLoggedIn>
+        <a (click)="logout()" class="nav-item">
+            Logout
+        </a>
+    </ng-template>
     <a class="nav-item" routerLink="/items">
-      Realtime DB
+      ICNEF Members
+    </a>
+    <!-- <a class="nav-item" routerLink="/notes">
+      Firestore
     </a>
     <a class="nav-item" routerLink="/uploads">
       File Uploads
-    </a>
+    </a> -->
   </div>
 </nav>
