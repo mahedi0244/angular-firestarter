@@ -1,6 +1,4 @@
-<h1>Items</h1>
-
-<p>This page is a demo of a very basic todo list in Angular, using the Firebase Realtime DB on the backend.</p>
+<h1>ICNEF MEMBERS</h1>
 
 <div *ngFor="let item of items | async" class="card">
   <item-detail [item]='item'></item-detail>
@@ -8,7 +6,7 @@
 
 <loading-spinner *ngIf="showSpinner"></loading-spinner>
 
-<button type="button" class="button is-danger" (click)='deleteItems()'>Delete Entire List</button>
+<!-- <button type="button" class="button is-danger" (click)='deleteItems()'>Delete Entire List</button> -->
 
 <hr>
 

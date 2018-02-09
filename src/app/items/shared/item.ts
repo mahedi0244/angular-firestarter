@@ -1,7 +1,30 @@
 export class Item {
   $key: string;
   title: string;
-  body: string;
+  last_name: string;
+  first_name: string;
+  middle_name: string;
+  email_id: string;
+  spouse_name: string;
+  spouse_email_id: string;
+  country_of_birth: string;
+  profession: string;
+  membership_class: string;
+  membership_date: string;
+  home_phone: string;
+  work_phone: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  organization: string;
+  is_this_business:false;
+  is_active_member:false;
+  is_exemted_member: string;
+  board_member: string;
+  pledged: string;
+  mem_paid_until: string;
+  land_fund_pledge: string;
   active = true;
   timeStamp: number;
 }

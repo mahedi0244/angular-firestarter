@@ -1,15 +1,15 @@
-<h3 [ngClass]="{ 'strike-out': !item.active }">
-  {{ item.title || 'missing title' }}
-</h3>
+<!-- <h3 [ngClass]="{ 'strike-out': !item.active }"> -->
+<h3>First Name : {{ item.first_name || '-' }}</h3>
+<h3>Last Name : {{ item.last_name || '-' }}</h3>
 
-<div class="card-content">
+<!-- <div class="card-content">
   Task Active?: {{ item.active }}<br>
   {{ item.timeStamp | date: 'medium' }}
-</div>
+</div> -->
 
-<div class="card-footer">
+<!-- <div class="card-footer">
   <span class="button is-small is-info card-footer-item" (click)='updateTimeStamp()'>Update Timestamp</span>
   <span class="button is-small is-success card-footer-item" *ngIf='item.active' (click)='updateActive(false)'>Mark Complete</span>
   <span class="button is-small is-warning card-footer-item" *ngIf='!item.active' (click)='updateActive(true)'>Mark Incomplete</span>
   <span class="button is-small is-danger card-footer-item" (click)='deleteItem()'>Delete</span>
-</div>
+</div> -->

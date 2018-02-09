@@ -1,11 +1,13 @@
-<h3>New Task Form</h3>
+<h3>Add New ICNEF Member</h3>
 
 <label class="label">Name: </label>
 
-<input placeholder="Item Title" class="input"
-[(ngModel)]="item.title"
+<input placeholder="First Name" class="input"
+[(ngModel)]="item.first_name"
 required minlength="2" maxlength="23"
 #title='ngModel' autofocus>
+<input placeholder="Last Name" class="input"
+[(ngModel)]="item.last_name" autofocus>
 
 <div *ngIf="title.dirty">
   <span *ngIf='title.errors; then errors else valid'>template renders here...</span>
