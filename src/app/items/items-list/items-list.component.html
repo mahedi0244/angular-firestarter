@@ -1,12 +1,31 @@
-<h1>ICNEF MEMBERS</h1>
-
-<div *ngFor="let item of items | async" class="card">
-  <item-detail [item]='item'></item-detail>
-</div>
-
+<h1>ICNEF SUBSCRIBERS</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Profession</th>
+      <th>Home Phone</th>
+      <th>Zip</th>
+      <th>Membership Class</th>
+      <th>Membership Status</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of items | async">
+    <td>{{item.title}} {{item.first_name}}</td>
+    <td>{{item.last_name}}</td>
+    <td>{{item.email_id}}</td>
+    <td>{{item.profession}}</td>
+    <td>{{item.home_phone}}</td>
+    <td>{{item.zip}}</td>
+    <td>{{item.membership_class}}</td>
+    <td>{{item.is_active}}</td>
+  </tbody>
+</table>
 <loading-spinner *ngIf="showSpinner"></loading-spinner>
 
-<!-- <button type="button" class="button is-danger" (click)='deleteItems()'>Delete Entire List</button> -->
+<button type="button" class="button is-danger" (click)='deleteItems()'>Delete Entire List</button>
 
 <hr>
 

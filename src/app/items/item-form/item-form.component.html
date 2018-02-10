@@ -1,14 +1,40 @@
 <h3>Add New ICNEF Member</h3>
 
-<label class="label">Name: </label>
-
-<input placeholder="First Name" class="input"
-[(ngModel)]="item.first_name"
-required minlength="2" maxlength="23"
-#title='ngModel' autofocus>
-<input placeholder="Last Name" class="input"
-[(ngModel)]="item.last_name" autofocus>
-
+<!-- <label class="label">Name: </label> -->
+<div class="columns">
+  <div class="column">
+    <input placeholder="Title" class="input"
+    [(ngModel)]="item.title" autofocus>
+  </div>
+  <div class="column">
+    <input placeholder="First Name" class="input"
+    [(ngModel)]="item.first_name"
+    required minlength="2" maxlength="23"
+    #title='ngModel' autofocus>
+  </div>
+  <div class="column">
+      <input placeholder="Middle Name" class="input"
+      [(ngModel)]="item.middle_name" autofocus>
+  </div>
+  <div class="column">
+      <input placeholder="Last Name" class="input"
+      [(ngModel)]="item.last_name" autofocus>
+  </div>
+</div>
+<div class="columns">
+  <div class="column">
+      <input placeholder="Email" class="input"
+      [(ngModel)]="item.email_id" autofocus>
+  </div>
+  <div class="column">
+      <input placeholder="Profession" class="input"
+      [(ngModel)]="item.profession" autofocus>
+  </div>
+  <div class="column">
+      <input placeholder="Spouse Name" class="input"
+      [(ngModel)]="item.spouse_name" autofocus>
+  </div>
+</div>
 <div *ngIf="title.dirty">
   <span *ngIf='title.errors; then errors else valid'>template renders here...</span>
 </div>
