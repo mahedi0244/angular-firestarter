@@ -34,6 +34,16 @@
       <input placeholder="Spouse Name" class="input"
       [(ngModel)]="item.spouse_name" autofocus>
   </div>
+  <div class="column">
+      <input placeholder="Home Phone Number" class="input"
+      [(ngModel)]="item.home_phone" autofocus>
+  </div>
+</div>
+<div class="columns">
+  <div class="column">
+      <input placeholder="Work Phone Number" class="input"
+      [(ngModel)]="item.work_phone" autofocus>
+  </div>
 </div>
 <div *ngIf="title.dirty">
   <span *ngIf='title.errors; then errors else valid'>template renders here...</span>
