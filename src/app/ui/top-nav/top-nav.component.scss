@@ -14,3 +14,17 @@ nav {
     }
   }
 }
+
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+}
+
+.has-dropdown {
+  &:hover {
+    .dropdown {
+      display: block;
+    }
+  }
+}

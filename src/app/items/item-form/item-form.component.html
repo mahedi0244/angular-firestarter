@@ -1,4 +1,4 @@
-<h3>Add New ICNEF Member</h3>
+<h3>Create ICNEF Subscriber Profile</h3>
 
 <!-- <label class="label">Name: </label> -->
 <div class="columns">
@@ -13,10 +13,6 @@
     #title='ngModel' autofocus>
   </div>
   <div class="column">
-      <input placeholder="Middle Name" class="input"
-      [(ngModel)]="item.middle_name" autofocus>
-  </div>
-  <div class="column">
       <input placeholder="Last Name" class="input"
       [(ngModel)]="item.last_name" autofocus>
   </div>
@@ -27,24 +23,35 @@
       [(ngModel)]="item.email_id" autofocus>
   </div>
   <div class="column">
-      <input placeholder="Profession" class="input"
-      [(ngModel)]="item.profession" autofocus>
-  </div>
-  <div class="column">
-      <input placeholder="Spouse Name" class="input"
-      [(ngModel)]="item.spouse_name" autofocus>
-  </div>
-  <div class="column">
       <input placeholder="Home Phone Number" class="input"
       [(ngModel)]="item.home_phone" autofocus>
   </div>
-</div>
-<div class="columns">
   <div class="column">
-      <input placeholder="Work Phone Number" class="input"
-      [(ngModel)]="item.work_phone" autofocus>
+      <input placeholder="Zip" class="input"
+      [(ngModel)]="item.zip" autofocus>
   </div>
 </div>
+<div class="columns">
+    <div class="column">
+        <input placeholder="Profession" class="input"
+        [(ngModel)]="item.profession" autofocus>
+    </div>
+    <div class="column">
+        <input placeholder="Membership Class" class="input"
+        [(ngModel)]="item.membership_class" autofocus>
+    </div>
+    <div class="column">
+      <div class="form-group">
+          <label for="membership_status">Membership Status</label>
+          <select class="dropdown-menu"  id="membership_status"
+                  required 
+                  [(ngModel)]="item.is_active_member" name="membership_status">
+            <option [value]="true">Active</option>
+            <option [value]="false">Inactive</option>
+          </select>
+        </div>
+    </div>
+  </div>
 <div *ngIf="title.dirty">
   <span *ngIf='title.errors; then errors else valid'>template renders here...</span>
 </div>
@@ -58,3 +65,4 @@
 <ng-template #errors>
   <p class="help is-danger">form contains errors!</p>
 </ng-template>
+

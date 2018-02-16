@@ -20,7 +20,9 @@
     <td>{{item.home_phone}}</td>
     <td>{{item.zip}}</td>
     <td>{{item.membership_class}}</td>
-    <td>{{item.is_active}}</td>
+    <td *ngIf="item.is_active_member == 'true'">Active</td>
+    <td *ngIf="item.is_active_member == 'false'">Inactive</td>
+    <td *ngIf="!item.is_active_member"></td>
   </tbody>
 </table>
 <loading-spinner *ngIf="showSpinner"></loading-spinner>
@@ -28,5 +30,3 @@
 <button type="button" class="button is-danger" (click)='deleteItems()'>Delete Entire List</button>
 
 <hr>
-
-<item-form></item-form>
